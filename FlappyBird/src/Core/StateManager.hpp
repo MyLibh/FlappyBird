@@ -13,9 +13,9 @@ namespace Core
 	class StateManager
 	{
 	public:
-		[[nodiscard]] inline const state_ptr_t& getActiveState() const noexcept { return m_states.top(); }
+		[[nodiscard]] inline const state_ptr_t& getActiveState() const { return m_states.top(); }
 
-		void addState(state_ptr_t newState, bool hasToReplace = true);
+		void addState(state_ptr_t newState, bool hasToReplace = true) noexcept;
 
 		inline void removeState() noexcept { m_hasToRemove = true; }
 

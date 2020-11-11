@@ -120,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
       <AdditionalIncludeDirectories>D:\lib\SFML\SFML-2.5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
@@ -148,14 +148,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\AssetManager.cpp" />
+    <ClCompile Include="src\Core\GameManager.cpp" />
+    <ClCompile Include="src\Core\InputManager.cpp" />
+    <ClCompile Include="src\Core\StateManager.cpp" />
+    <ClCompile Include="src\Game\Bird.cpp" />
+    <ClCompile Include="src\Game\Flash.cpp" />
+    <ClCompile Include="src\Game\Game.cpp" />
+    <ClCompile Include="src\Game\GameOver.cpp" />
+    <ClCompile Include="src\Game\HUD.cpp" />
+    <ClCompile Include="src\Game\Land.cpp" />
+    <ClCompile Include="src\Game\LogoScreen.cpp" />
+    <ClCompile Include="src\Game\MainMenu.cpp" />
+    <ClCompile Include="src\Game\Pipes.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\StateManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\AssetManager.hpp" />
-    <ClInclude Include="src\base_state.hpp" />
-    <ClInclude Include="src\StateManager.hpp" />
+    <ClInclude Include="src\Core\AssetManager.hpp" />
+    <ClInclude Include="src\Core\base_state.hpp" />
+    <ClInclude Include="src\Core\GameData.hpp" />
+    <ClInclude Include="src\Core\GameManager.hpp" />
+    <ClInclude Include="src\Core\InputManager.hpp" />
+    <ClInclude Include="src\Core\StateManager.hpp" />
+    <ClInclude Include="src\Game\Bird.hpp" />
+    <ClInclude Include="src\Game\Collision.hpp" />
+    <ClInclude Include="src\Game\Flash.hpp" />
+    <ClInclude Include="src\Game\Game.hpp" />
+    <ClInclude Include="src\Game\GameOver.hpp" />
+    <ClInclude Include="src\Game\HUD.hpp" />
+    <ClInclude Include="src\Game\Land.hpp" />
+    <ClInclude Include="src\Game\LogoScreen.hpp" />
+    <ClInclude Include="src\Game\MainMenu.hpp" />
+    <ClInclude Include="src\Game\Pipes.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

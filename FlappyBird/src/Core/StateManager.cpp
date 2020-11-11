@@ -5,7 +5,7 @@
 
 namespace Core
 {
-	void StateManager::addState(state_ptr_t newState, bool hasToReplace /* = true */)
+	void StateManager::addState(state_ptr_t newState, bool hasToReplace /* = true */) noexcept
 	{
 		m_hasToAdd     = true;
 		m_hasToReplace = hasToReplace;

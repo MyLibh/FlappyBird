@@ -16,33 +16,111 @@
     <Filter Include="Header Files\Core">
       <UniqueIdentifier>{90bcb616-586c-49d9-a841-def4491e2708}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Core\States">
-      <UniqueIdentifier>{5c19ff07-18e3-4788-98b5-dfda6766ae87}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Core">
       <UniqueIdentifier>{7dcb0059-5ee2-433f-b9a9-197bef608978}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game">
+      <UniqueIdentifier>{299c32de-87ce-49e7-9d41-0c2ae8c3b798}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game\States">
+      <UniqueIdentifier>{61f04b5a-1a39-4e6e-9401-c174320e1a31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game">
+      <UniqueIdentifier>{1e74f4ac-c478-43c0-99cc-957c92820731}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game\States">
+      <UniqueIdentifier>{69b7f92d-14eb-44f0-bf8c-bc6a48a5b2e2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\StateManager.cpp">
+    <ClCompile Include="src\Core\GameManager.cpp">
       <Filter>Source Files\Core</Filter>
     </ClCompile>
-    <ClCompile Include="src\AssetManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\Core\StateManager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\MainMenu.cpp">
+      <Filter>Source Files\Game\States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\LogoScreen.cpp">
+      <Filter>Source Files\Game\States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Game.cpp">
+      <Filter>Source Files\Game\States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\GameOver.cpp">
+      <Filter>Source Files\Game\States</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Core\InputManager.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Flash.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\HUD.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Bird.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Land.cpp">
+      <Filter>Source Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Game\Pipes.cpp">
+      <Filter>Source Files\Game</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\base_state.hpp">
-      <Filter>Header Files\Core\States</Filter>
-    </ClInclude>
-    <ClInclude Include="src\StateManager.hpp">
-      <Filter>Header Files\Core\States</Filter>
-    </ClInclude>
-    <ClInclude Include="src\AssetManager.hpp">
+    <ClInclude Include="src\Core\AssetManager.hpp">
       <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\GameManager.hpp">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\StateManager.hpp">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\InputManager.hpp">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\base_state.hpp">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\MainMenu.hpp">
+      <Filter>Header Files\Game\States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\GameData.hpp">
+      <Filter>Header Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\LogoScreen.hpp">
+      <Filter>Header Files\Game\States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Game.hpp">
+      <Filter>Header Files\Game\States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\GameOver.hpp">
+      <Filter>Header Files\Game\States</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Bird.hpp">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Collision.hpp">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\HUD.hpp">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Flash.hpp">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Land.hpp">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Game\Pipes.hpp">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

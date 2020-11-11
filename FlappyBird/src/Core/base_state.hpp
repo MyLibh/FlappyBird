@@ -8,11 +8,12 @@ namespace Core
 	public:
 		virtual void init() = 0;
 
-		virtual void update() = 0;
-		virtual void draw() = 0;
+		virtual void handleEvents() = 0;
+		virtual void update(const float dt) = 0;
+		virtual void draw(const float dt) = 0;
 
-		virtual void puase() = 0;
-		virtual void resume() = 0;
+		virtual void pause() {};
+		virtual void resume() {};
 	};
 } // namespace Core
 
