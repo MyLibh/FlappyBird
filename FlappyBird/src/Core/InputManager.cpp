@@ -9,7 +9,11 @@ namespace Core
     {
 		if (sf::Mouse::isButtonPressed(button))
 		{
-			sf::IntRect playButtonRect(sprite.getPosition().x, sprite.getPosition().y, sprite.getGlobalBounds().width, sprite.getGlobalBounds().height);
+			sf::IntRect playButtonRect(
+				static_cast<int>(sprite.getPosition().x),
+				static_cast<int>(sprite.getPosition().y),
+				static_cast<int>(sprite.getGlobalBounds().width),
+				static_cast<int>(sprite.getGlobalBounds().height));
 
 			if (playButtonRect.contains(sf::Mouse::getPosition(window)))
 				return true;
