@@ -24,13 +24,21 @@ namespace Game
 		if (!std::filesystem::exists("data"))
 			std::filesystem::create_directory("data");
 
-		std::fstream file("data/result.txt", std::ios::in | std::ios::out | std::ios::trunc);
+		if (!std::filesystem::exists("data/highscore.txt"))
+			std::ofstream("data/highscore.txt");
+
+		std::fstream file("data/highscore.txt", std::ios::in);
 		if (!file.is_open())
-			throw std::runtime_error("Cannot open highscore file");
+			throw std::runtime_error("Cannot open highscore file for reading");
 
 		file >> m_highscore;
-		file << std::max(m_score, m_highscore);
+		file.close();
 
+		file.open("data/highscore.txt", std::ios::out | std::ios::trunc);
+		if (!file.is_open())
+			throw std::runtime_error("Cannot open highscore file for writing");
+
+		file << std::max(m_score, m_highscore);
 		file.close();
 	}
 
