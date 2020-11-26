@@ -25,7 +25,7 @@ namespace Game
 		};
 
 	public:
-		Bird(Core::ptr_game_data_t gameData);
+		explicit Bird(Core::ptr_game_data_t gameData);
 
 		inline const auto& getSprite() const { return m_sprite; }
 

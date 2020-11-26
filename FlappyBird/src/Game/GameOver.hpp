@@ -1,12 +1,12 @@
 #ifndef __GAME_OVER_HPP_INCLUDED__
 #define __GAME_OVER_HPP_INCLUDED__
 
-#include "../Core/base_state.hpp"
+#include "../Core/BaseState.hpp"
 #include "../Core/GameData.hpp"
 
 namespace Game
 {
-	class GameOver final : public Core::base_state
+	class GameOver final : public Core::BaseState
 	{
 	private:
 		enum class State

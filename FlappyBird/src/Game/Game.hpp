@@ -1,7 +1,7 @@
 #ifndef __GAME_HPP_INCLUDED__
 #define __GAME_HPP_INCLUDED__
 
-#include "../Core/base_state.hpp"
+#include "../Core/BaseState.hpp"
 #include "../Core/GameData.hpp"
 
 namespace Game
@@ -11,7 +11,7 @@ namespace Game
 	class Land;
 	class HUD;
 	class Flash;
-	class Game final : public Core::base_state
+	class Game final : public Core::BaseState
 	{
 	private:
 		enum class State
@@ -25,7 +25,7 @@ namespace Game
 		void _load();
 
 	public:
-		inline Game(Core::ptr_game_data_t gameData) :
+		inline explicit Game(Core::ptr_game_data_t gameData) :
 			m_gameData(gameData),
 			m_score{},
 			m_state(State::Ready)

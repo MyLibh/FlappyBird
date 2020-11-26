@@ -11,7 +11,7 @@ namespace Game
 		inline static constexpr auto SPEED{ 200.f };
 
 	public:
-		inline Pipes(Core::ptr_game_data_t gameData) :
+		inline explicit Pipes(Core::ptr_game_data_t gameData) :
 			m_gameData(gameData),
 			m_landHeight(m_gameData->assetManager.getTexture("Land").getSize().y),
 			m_spawnOffset{}
@@ -23,21 +23,21 @@ namespace Game
 
 		inline void spawnBottomPipe()
 		{
-			const auto size = m_gameData->window.getSize();
+			const auto [w, h] = m_gameData->window.getSize();
 			m_pipes.emplace_back(m_gameData->assetManager.getTexture("PipeUp"));
-			m_pipes.back().setPosition(size.x, size.y - m_pipes.back().getLocalBounds().height - m_spawnOffset);
+			m_pipes.back().setPosition(static_cast<float>(w), h - m_pipes.back().getLocalBounds().height - m_spawnOffset);
 		}
 
 		inline void spawnTopPipe()
 		{
 			m_pipes.emplace_back(m_gameData->assetManager.getTexture("PipeDown"));
-			m_pipes.back().setPosition(m_gameData->window.getSize().x, -m_spawnOffset);
+			m_pipes.back().setPosition(static_cast<float>(m_gameData->window.getSize().x), static_cast<float>(-m_spawnOffset));
 		}
 
 		inline void spawnScoringPipe()
 		{
 			m_scoringPipes.emplace_back(m_gameData->assetManager.getTexture("ScoringPipe"));
-			m_scoringPipes.back().setPosition(m_gameData->window.getSize().x, 0);
+			m_scoringPipes.back().setPosition(static_cast<float>(m_gameData->window.getSize().x), 0.f);
 		}
 
 		void move(const float dt);

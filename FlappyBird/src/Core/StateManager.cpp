@@ -19,20 +19,12 @@ namespace Core
 			m_states.pop();
 		
 			m_hasToRemove = false;
-
-			if (!m_states.empty())
-				m_states.top()->resume();
 		}
 
 		if (m_hasToAdd)
 		{
-			if (!m_states.empty())
-			{
-				if (m_hasToReplace)
-					m_states.pop();
-				else
-					m_states.top()->pause();
-			}
+			if (!m_states.empty() && m_hasToReplace)
+				m_states.pop();
 
 			m_states.push(std::move(m_newState));
 			m_states.top()->init();

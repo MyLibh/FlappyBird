@@ -8,7 +8,7 @@ namespace Game
 	class HUD
 	{
 	public:
-		HUD(Core::ptr_game_data_t gameData);
+		explicit HUD(Core::ptr_game_data_t gameData);
 
 		inline void draw() { m_gameData->window.draw(m_score); }
 

@@ -38,7 +38,8 @@ namespace Game
 		if (!file.is_open())
 			throw std::runtime_error("Cannot open highscore file for writing");
 
-		file << std::max(m_score, m_highscore);
+		m_highscore = std::max(m_score, m_highscore);
+		file << m_highscore;
 		file.close();
 	}
 
@@ -81,6 +82,7 @@ namespace Game
 			m_medal.setPosition(m_block.getPosition().x + bounds.width * 0.12f, m_block.getPosition().y + bounds.height * 0.38f);
 		}
 
+		const auto& [w, h] = m_gameData->window.getSize();
 		m_scoreText.setFont(m_gameData->assetManager.getFont("FlappyFont"));
 		m_scoreText.setCharacterSize(40);
 		m_scoreText.setString("0");
@@ -88,7 +90,7 @@ namespace Game
 		m_scoreText.setOutlineColor(sf::Color::Black);
 		m_scoreText.setOutlineThickness(2.f);
 		m_scoreText.setOrigin(sf::Vector2f(m_scoreText.getGlobalBounds().width / 2, m_scoreText.getGlobalBounds().height / 2));
-		m_scoreText.setPosition(sf::Vector2f(m_gameData->window.getSize().x / 10 * 7.5f, m_gameData->window.getSize().y / 2.14f));
+		m_scoreText.setPosition(sf::Vector2f(w / 10 * 7.5f, h / 2.14f));
 
 		m_highscoreText.setFont(m_gameData->assetManager.getFont("FlappyFont"));
 		m_highscoreText.setCharacterSize(40);
@@ -97,7 +99,7 @@ namespace Game
 		m_highscoreText.setOutlineColor(sf::Color::Black);
 		m_highscoreText.setOutlineThickness(2.f);
 		m_highscoreText.setOrigin(sf::Vector2f(m_highscoreText.getGlobalBounds().width / 2, m_highscoreText.getGlobalBounds().height / 2));
-		m_highscoreText.setPosition(sf::Vector2f(m_gameData->window.getSize().x / 10 * 7.5f, m_gameData->window.getSize().y / 1.82f));
+		m_highscoreText.setPosition(sf::Vector2f(w / 10 * 7.5f, h / 1.82f));
 	}
 
 	void GameOver::handleEvents()

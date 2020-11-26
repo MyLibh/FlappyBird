@@ -3,7 +3,7 @@
 
 namespace Core
 {
-	class base_state
+	class BaseState
 	{
 	public:
 		virtual void init() = 0;
@@ -11,9 +11,6 @@ namespace Core
 		virtual void handleEvents() = 0;
 		virtual void update(const float dt) = 0;
 		virtual void draw(const float dt) = 0;
-
-		virtual void pause() {};
-		virtual void resume() {};
 	};
 } // namespace Core
 

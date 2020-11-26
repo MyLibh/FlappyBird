@@ -4,11 +4,11 @@
 #include <memory>
 #include <stack>
 
-#include "base_state.hpp"
+#include "BaseState.hpp"
 
 namespace Core
 {
-	using state_ptr_t = std::unique_ptr<base_state>;
+	using state_ptr_t = std::unique_ptr<BaseState>;
 
 	class StateManager
 	{

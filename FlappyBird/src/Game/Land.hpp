@@ -11,7 +11,7 @@ namespace Game
 		inline static constexpr auto SPEED{ 200.f };
 
 	public:
-		Land(Core::ptr_game_data_t gameData);
+		explicit Land(Core::ptr_game_data_t gameData);
 
 		inline const auto& getSprites() const noexcept { return m_land; }
 

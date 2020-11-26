@@ -1,18 +1,16 @@
 #ifndef __LOGO_SREEN_HPP_INCLUDED__
 #define __LOGO_SREEN_HPP_INCLUDED__
 
-#include "../Core/base_state.hpp"
+#include "../Core/BaseState.hpp"
 #include "../Core/GameData.hpp"
 
 namespace Game
 {
-	class LogoScreen final : public Core::base_state
+	class LogoScreen final : public Core::BaseState
 	{
 	public:
-		inline LogoScreen(Core::ptr_game_data_t gameData) :
-			m_gameData(gameData),
-			m_clock(),
-			m_sprite()
+		inline explicit LogoScreen(Core::ptr_game_data_t gameData) :
+			m_gameData(gameData)
 		{}
 
 		void init() override;

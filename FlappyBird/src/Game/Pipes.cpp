@@ -8,15 +8,15 @@ namespace Game
 	void Pipes::move(const float dt)
 	{
 		for (size_t i{}; i < m_pipes.size(); ++i)
-			if (m_pipes.at(i).getPosition().x < -m_pipes.at(i).getLocalBounds().width)
+			if (auto& pipe = m_pipes.at(i); pipe.getPosition().x < -m_pipes.at(i).getLocalBounds().width)
 				m_pipes.erase(m_pipes.begin() + i);
 			else
-				m_pipes.at(i).move(-Pipes::SPEED * dt, 0);
+				pipe.move(-Pipes::SPEED * dt, 0.f);
 
 		for (size_t i{}; i < m_scoringPipes.size(); ++i)
-			if (m_scoringPipes.at(i).getPosition().x < -m_scoringPipes.at(i).getLocalBounds().width)
+			if (auto& pipe = m_scoringPipes.at(i); pipe.getPosition().x < -pipe.getLocalBounds().width)
 				m_scoringPipes.erase(m_scoringPipes.begin() + i);
 			else
-				m_scoringPipes.at(i).move(-Pipes::SPEED * dt, 0);
+				pipe.move(-Pipes::SPEED * dt, 0.f);
 	}
 } // namespace Game

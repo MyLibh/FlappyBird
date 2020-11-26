@@ -167,7 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Core\AssetManager.hpp" />
-    <ClInclude Include="src\Core\base_state.hpp" />
+    <ClInclude Include="src\Core\BaseState.hpp" />
     <ClInclude Include="src\Core\GameData.hpp" />
     <ClInclude Include="src\Core\GameManager.hpp" />
     <ClInclude Include="src\Core\InputManager.hpp" />

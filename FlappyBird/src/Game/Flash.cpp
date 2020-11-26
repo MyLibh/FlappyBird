@@ -14,6 +14,6 @@ namespace Game
 
 		m_isOn = false;
 
-		m_shape.setFillColor(sf::Color(255, 255, 255, alpha));
+		m_shape.setFillColor(sf::Color(255, 255, 255, static_cast<sf::Uint8>(alpha)));
 	}
 } // namespace Game

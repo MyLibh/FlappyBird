@@ -12,8 +12,7 @@ namespace Core
 
 	public:
 		inline GameManager(const unsigned width, const unsigned height, const std::string_view title) :
-			m_gameData(std::make_shared<GameData>()),
-			m_clock()
+			m_gameData(std::make_shared<GameData>())
 		{
 			m_gameData->window.create(sf::VideoMode(width, height), title.data(), sf::Style::Close | sf::Style::Titlebar);
 		}

@@ -11,9 +11,9 @@ namespace Game
 		inline static constexpr auto SPEED{ 1500.f };
 
 	public:
-		Flash(Core::ptr_game_data_t gameData) :
+		inline explicit Flash(Core::ptr_game_data_t gameData) :
 			m_gameData(gameData),
-			m_shape(sf::Vector2f(m_gameData->window.getSize().x, m_gameData->window.getSize().y)),
+			m_shape(sf::Vector2f(static_cast<float>(m_gameData->window.getSize().x), static_cast<float>(m_gameData->window.getSize().y))),
 			m_isOn(true)
 		{
 			m_shape.setFillColor(sf::Color(255, 255, 255, 0));

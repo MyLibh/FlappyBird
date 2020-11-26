@@ -86,9 +86,6 @@
     <ClInclude Include="src\Core\InputManager.hpp">
       <Filter>Header Files\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\Core\base_state.hpp">
-      <Filter>Header Files\Core</Filter>
-    </ClInclude>
     <ClInclude Include="src\Game\MainMenu.hpp">
       <Filter>Header Files\Game\States</Filter>
     </ClInclude>
@@ -121,6 +118,9 @@
     </ClInclude>
     <ClInclude Include="src\Game\Pipes.hpp">
       <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Core\BaseState.hpp">
+      <Filter>Header Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

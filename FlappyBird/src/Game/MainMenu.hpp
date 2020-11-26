@@ -1,22 +1,19 @@
 #ifndef __MAIN_MENU_HPP_INCLUDED__
 #define __MAIN_MENU_HPP_INCLUDED__
 
-#include "../Core/base_state.hpp"
+#include "../Core/BaseState.hpp"
 #include "../Core/GameData.hpp"
 
 namespace Game
 {
-	class MainMenu final : public Core::base_state
+	class MainMenu final : public Core::BaseState
 	{
 	private:
 		void _load();
 
 	public:
-		inline MainMenu(Core::ptr_game_data_t gameData) :
-			m_gameData(gameData),
-			m_bckg(),
-			m_title(),
-			m_playButton()
+		inline explicit MainMenu(Core::ptr_game_data_t gameData) :
+			m_gameData(gameData)
 		{ }
 
 		void init() override;
